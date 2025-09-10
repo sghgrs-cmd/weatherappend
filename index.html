@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="weather app.css">
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="weather-bg">
+    <canvas id="weatherEffect"></canvas>
+    <div class="app">
+      <header class="header">
+        <form class="search-bar" autocomplete="off">
+          <input type="text" id="cityInput" placeholder="Search city…" maxlength="40" autocomplete="off">
+          <button type="submit" class="search-btn" title="Search"><span>🔍</span></button>
+          <button type="button" class="geo-btn" id="geoBtn" title="My location"><span>📍</span></button>
+        </form>
+        <div class="theme-switch">
+          <span class="theme-label">Theme</span>
+          <label class="switch">
+            <input id="themeToggle" type="checkbox" aria-label="Toggle theme">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="weather-panel">
+          <div class="city-country" id="cityCountry">—</div>
+          <div class="weather-main">
+            <div class="weather-icon" id="weatherIcon"></div>
+            <div class="weather-temp" id="weatherTemp">--°C</div>
+          </div>
+          <div class="weather-desc" id="weatherDesc">—</div>
+          <div class="weather-cards">
+            <div class="weather-card">
+              <div class="card-icon">💨</div>
+              <div class="card-label">Wind</div>
+              <div class="card-value" id="windValue">—</div>
+            </div>
+            <div class="weather-card">
+              <div class="card-icon">💧</div>
+              <div class="card-label">Humidity</div>
+              <div class="card-value" id="humidityValue">—</div>
+            </div>
+            <div class="weather-card">
+              <div class="card-icon">🌡️</div>
+              <div class="card-label">Pressure</div>
+              <div class="card-value" id="pressureValue">—</div>
+            </div>
+            <div class="weather-card">
+              <div class="card-icon">🌅</div>
+              <div class="card-label">Sunrise</div>
+              <div class="card-value" id="sunriseValue">—</div>
+            </div>
+            <div class="weather-card">
+              <div class="card-icon">🌇</div>
+              <div class="card-label">Sunset</div>
+              <div class="card-value" id="sunsetValue">—</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="forecast-panel">
+          <div class="forecast-title">Forecast</div>
+          <div class="forecast-list" id="forecastList"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="clock" id="clock">--:--</div>
+        <div class="history" id="history"></div>
+      </footer>
+    </div>
+  </div>
+  <script src="weather app.js"></script>
+</body>
+</html>
